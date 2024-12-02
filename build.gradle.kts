@@ -10,7 +10,7 @@ plugins {
 }
 
 group = "com.github.mccreativelab"
-version = "1.0"
+version = "1.0+1.21.3"
 
 repositories {
     mavenCentral()
