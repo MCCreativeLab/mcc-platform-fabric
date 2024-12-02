@@ -14,7 +14,11 @@ version = "1.0+1.21.3"
 
 repositories {
     mavenCentral()
-    mavenLocal()
+    mavenLocal {
+        content {
+            includeGroup("de.verdox.mccreativelab")
+        }
+    }
 }
 
 dependencies {
