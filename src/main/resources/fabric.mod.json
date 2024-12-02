@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "mccreativelab",
+  "version": "${version}",
+  "name": "MCCreativeLab",
+  "description": "MCCreativeLab is a powerful Minecraft server library for creating a unique, customized Minecraft multiplayer experience by using the advantages of server-side modding",
+  "authors": [
+    "derverdox",
+    "DinoMarlir"
+  ],
+  "contact": {
+    "issues": "https://github.com/MCCreativeLab/mcc-platform-fabric",
+    "sources": "https://github.com/MCCreativeLab/mcc-platform-fabric/issues"
+  },
+  "license": "GPLv3+",
+  "icon": "assets/mccreativelab/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "adapter": "kotlin",
+        "value": "com.github.mccreativelab.platform.fabric.EntrypointKt::initMain"
+      }
+    ],
+    "server": [
+      {
+        "adapter": "kotlin",
+        "value": "com.github.mccreativelab.platform.fabric.EntrypointKt::initServer"
+      }
+    ]
+  },
+  "mixins": [
+    "mccreativelab.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15",
+    "minecraft": ">=1.21.3",
+    "java": ">=21",
+    "fabric-language-kotlin": "*",
+    "fabric": "*",
+    "silk-core": "*"
+  }
+}
