@@ -1,5 +1,6 @@
 package com.github.mccreativelab.platform.fabric.mixins;
 
+import com.github.mccreativelab.platform.fabric.EntrypointKt;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ClickType;
@@ -25,5 +26,6 @@ public class MixinAbstractContainerMenu {
     @Inject(method = "doClick", at = @At("HEAD"))
     private void injectDoClick(int i, int j, ClickType clickType, Player player, CallbackInfo ci) {
         // TODO: call MCCInventoryClickEvent
+        EntrypointKt.getLogger().warning("MixinAbstractContainerMenu.doClick is not implemented yet");
     }
 }

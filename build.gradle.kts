@@ -25,7 +25,6 @@ dependencies {
     modImplementation("net.fabricmc:fabric-language-kotlin:1.13.0+kotlin.2.1.0")
     modImplementation("net.silkmc:silk-core:$silkVersion")
     include(implementation("de.verdox.mccreativelab", "mcc-wrapper", "1.0"))
-
 }
 
 tasks {
