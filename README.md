@@ -2,7 +2,7 @@
 The [FabricMC](https://fabricmc.net) implementation for [MCCreativeLab](https://github.com/MCCreativeLab/MCCreativeLab).
 
 > [!WARNING]
-> Do not use the cloud yet, it's still work in progress.
+> Do not use the mod yet, it's still work in progress.
 
 ## ⬇️ Installation
 1. Download the latest version of the mod from the [actions page](https://github.com/MCCreativeLab/mcc-platform-fabric/actions).
