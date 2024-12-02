@@ -14,6 +14,7 @@ version = "1.0"
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
@@ -23,6 +24,8 @@ dependencies {
     modImplementation("net.fabricmc.fabric-api:fabric-api:0.110.0+1.21.3")
     modImplementation("net.fabricmc:fabric-language-kotlin:1.13.0+kotlin.2.1.0")
     modImplementation("net.silkmc:silk-core:$silkVersion")
+    include(implementation("de.verdox.mccreativelab", "mcc-wrapper", "1.0"))
+
 }
 
 tasks {
