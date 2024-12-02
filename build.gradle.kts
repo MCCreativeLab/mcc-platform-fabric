@@ -6,6 +6,7 @@ val silkVersion = "1.10.7"
 plugins {
     kotlin("jvm") version "2.1.0"
     id("fabric-loom") version "1.9-SNAPSHOT"
+    `maven-publish`
 }
 
 group = "com.github.mccreativelab"
@@ -39,5 +40,13 @@ tasks {
         val properties = mapOf("version" to project.version)
         inputs.properties(properties)
         filesMatching("fabric.mod.json") { expand(properties) }
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("mod") {
+            from(components["java"])
+        }
     }
 }
