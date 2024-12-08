@@ -98,7 +98,6 @@ fun initServer() = Unit
 // TODO: MCCPlayerCommandPreprocessEvent
 // TODO: MCCPlayerShowEntityEvent
 // TODO: MCCPlayerToggleSneakEvent
-// TODO: MCCPlayerJoinEvent
 // TODO: MCCPlayerHideEntityEvent
 // TODO: MCCPlayerToggleFlightEvent
 // TODO: MCCPlayerLocaleChangeEvent
@@ -118,4 +117,5 @@ fun initServer() = Unit
 /*
  * Done:
  * - MCCPlayerDropItemEvent
+ * - MCCPlayerJoinEvent
  */
