@@ -94,7 +94,6 @@ fun initServer() = Unit
 // TODO: MCCBlockEvent
 // TODO: MCCPlayerChannelEvent
 // TODO: MCCPlayerMoveEvent
-// TODO: MCCPlayerDropItemEvent
 // TODO: MCCPlayerInteractEntityEvent
 // TODO: MCCPlayerCommandPreprocessEvent
 // TODO: MCCPlayerShowEntityEvent
@@ -115,3 +114,8 @@ fun initServer() = Unit
 // TODO: MCCPlayerExpChangeEvent
 // TODO: MCCPlayerToggleSprintEvent
 // TODO: MCCPlayerCommandSendEvent
+
+/*
+ * Done:
+ * - MCCPlayerDropItemEvent
+ */
