@@ -14,11 +14,7 @@ version = "1.0+1.21.3"
 
 repositories {
     mavenCentral()
-    mavenLocal {
-        content {
-            includeGroup("de.verdox.mccreativelab")
-        }
-    }
+    maven("https://repo.verdox.de/snapshots")
 }
 
 dependencies {
@@ -28,7 +24,7 @@ dependencies {
     modImplementation("net.fabricmc.fabric-api:fabric-api:0.110.0+1.21.3")
     modImplementation("net.fabricmc:fabric-language-kotlin:1.13.0+kotlin.2.1.0")
     modImplementation("net.silkmc:silk-core:$silkVersion")
-    include(implementation("de.verdox.mccreativelab", "mcc-wrapper", "1.0"))
+    include(implementation("de.verdox.mccreativelab", "mcc-wrapper", "1.0.0-SNAPSHOT"))
 }
 
 tasks {
