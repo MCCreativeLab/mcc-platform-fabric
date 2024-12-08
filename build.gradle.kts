@@ -14,17 +14,25 @@ version = "1.0+1.21.3"
 
 repositories {
     mavenCentral()
+    maven("https://maven.parchmentmc.org")
     maven("https://repo.verdox.de/snapshots")
 }
 
 dependencies {
     minecraft("com.mojang:minecraft:1.21.3")
-    mappings(loom.officialMojangMappings())
+
+    @Suppress("UnstableApiUsage")
+    mappings(loom.layered {
+        officialMojangMappings()
+        parchment("org.parchmentmc.data:parchment-1.21.3:2024.12.07@zip")
+    })
+
     modImplementation("net.fabricmc:fabric-loader:0.16.9")
     modImplementation("net.fabricmc.fabric-api:fabric-api:0.110.0+1.21.3")
     modImplementation("net.fabricmc:fabric-language-kotlin:1.13.0+kotlin.2.1.0")
     modImplementation("net.silkmc:silk-core:$silkVersion")
-    include(implementation("de.verdox.mccreativelab", "mcc-wrapper", "1.0.0-SNAPSHOT"))
+    include(implementation("de.verdox.mccreativelab.mcc-wrapper", "api", "1.0.0-SNAPSHOT"))
+    include(implementation("de.verdox.mccreativelab.mcc-wrapper", "vanilla", "1.0.0-SNAPSHOT"))
 }
 
 tasks {
