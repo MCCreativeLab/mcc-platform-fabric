@@ -28,10 +28,10 @@ public class MixinPlayerList {
     /**
      * Injects the join event for the player.
      *
-     * @param connection The connection.
-     * @param player     The player.
-     * @param cookie     The cookie.
-     * @param ci         The callback info.
+     * @param connection       The connection.
+     * @param player           The player.
+     * @param cookie           The cookie.
+     * @param ci               The callback info.
      * @param mutableComponent The mutable component.
      */
     @Inject(method = "placeNewPlayer", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/players/PlayerList;broadcastSystemMessage(Lnet/minecraft/network/chat/Component;Z)V", shift = At.Shift.AFTER))

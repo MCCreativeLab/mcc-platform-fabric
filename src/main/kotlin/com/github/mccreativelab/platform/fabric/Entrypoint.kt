@@ -66,10 +66,8 @@ fun initServer() = Unit
 // TODO: MCCExpBottleEvent
 // TODO: MCCEntityEnterBlockEvent
 // TODO: MCCWorldEvent
-// TODO: MCCWorldUnloadEvent
 // TODO: MCCWorldSaveEvent
 // TODO: MCCSpawnChangeEvent
-// TODO: MCCWorldLoadEvent
 // TODO: MCCWorldInitEvent
 // TODO: MCCServerListPingEvent
 // TODO: MCCServerEvent
@@ -115,7 +113,9 @@ fun initServer() = Unit
 // TODO: MCCPlayerCommandSendEvent
 
 /*
- * Done:
+ * Needs testing:
  * - MCCPlayerDropItemEvent
  * - MCCPlayerJoinEvent
+ * - MCCWorldLoadEvent
+ * - MCCWorldUnloadEvent
  */
