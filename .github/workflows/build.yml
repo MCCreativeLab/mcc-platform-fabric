@@ -4,7 +4,7 @@
 # against bad commits.
 
 name: build
-# on: [pull_request, push] -> currently, mcc-wrapper is not pubished to maven central, so the ci keeps failing
+on: [pull_request, push]
 
 jobs:
   build:
