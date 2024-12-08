@@ -1,5 +1,6 @@
 package com.github.mccreativelab.platform.fabric
 
+import de.verdox.mccreativelab.wrapper.platform.MCCPlatform
 import java.util.logging.Logger
 
 /**
@@ -15,7 +16,12 @@ fun initMain() = Unit
 /**
  * The entrypoint for the server.
  */
-fun initServer() = Unit
+fun initServer() {
+    MCCPlatform.INSTANCE.setup(FabricPlatform()) {
+        it.init()
+        logger.info("MCCPlatform has been setup.")
+    }
+}
 
 // TODO: MCCVehicleDamageEvent
 // TODO: MCCVehicleMoveEvent
