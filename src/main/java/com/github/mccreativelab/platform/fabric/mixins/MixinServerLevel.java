@@ -25,6 +25,7 @@ import java.util.List;
  * Implements the following events:
  * - MCCWorldLoadEvent
  * - MCCWorldUnloadEvent
+ * - MCCWorldSaveEvent
  */
 @Mixin(ServerLevel.class)
 public class MixinServerLevel {

@@ -71,7 +71,6 @@ fun initServer() {
 // TODO: MCCExpBottleEvent
 // TODO: MCCEntityEnterBlockEvent
 // TODO: MCCWorldEvent
-// TODO: MCCWorldSaveEvent
 // TODO: MCCSpawnChangeEvent
 // TODO: MCCWorldInitEvent
 // TODO: MCCServerListPingEvent
@@ -124,4 +123,5 @@ fun initServer() {
  * MCCPlayerCommandSendEvent
  * MCCPlayerToggleSprintEvent
  * MCCVehicleDamageEvent
+ * MCCWorldSaveEvent
  */
