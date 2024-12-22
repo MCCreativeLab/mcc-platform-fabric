@@ -5,6 +5,9 @@ The [FabricMC](https://fabricmc.net) implementation for [MCCreativeLab](https://
 > [!WARNING]
 > Do not use the mod yet, it's still work in progress.
 
+## 📝 TODO
+- [ ] Implement events
+
 ## ⬇️ Installation
 
 1. Download the latest version of the mod from
