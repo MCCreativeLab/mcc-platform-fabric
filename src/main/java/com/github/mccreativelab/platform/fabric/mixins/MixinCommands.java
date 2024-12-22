@@ -22,5 +22,6 @@ public class MixinCommands {
                 MCCPlatform.getInstance().getConversionService().wrap(player, TypeToken.of(MCCPlayer.class)),
                 Collections.emptyList() // TODO: check if this is correct
         );
+        event.callEvent();
     }
 }
