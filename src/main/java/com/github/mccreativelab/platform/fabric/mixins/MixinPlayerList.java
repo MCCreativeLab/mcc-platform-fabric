@@ -34,7 +34,7 @@ public class MixinPlayerList {
      * @param ci               The callback info.
      * @param mutableComponent The mutable component.
      */
-    @Inject(method = "placeNewPlayer", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/players/PlayerList;broadcastSystemMessage(Lnet/minecraft/network/chat/Component;Z)V", shift = At.Shift.AFTER))
+    @Inject(method = "placeNewPlayer", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/bossevents/CustomBossEvents;onPlayerConnect(Lnet/minecraft/server/level/ServerPlayer;)V", shift = At.Shift.AFTER))
     public void injectPlaceNewPlayer(Connection connection, ServerPlayer player, CommonListenerCookie cookie, CallbackInfo ci, @Local MutableComponent mutableComponent) {
         MCCPlayerJoinEvent event = new MCCPlayerJoinEvent(
                 MCCPlatform.getInstance().getConversionService().wrap((Entity) player, TypeToken.of(MCCEntity.class)),

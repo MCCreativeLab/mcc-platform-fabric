@@ -30,7 +30,7 @@ public class MixinPlayer {
      * @param bl        Whether the item stack should be dropped.
      * @param cir       The callback info returnable.
      */
-    @Inject(at = @At("HEAD"), method = "drop(Lnet/minecraft/world/item/ItemStack;Z)Lnet/minecraft/world/entity/item/ItemEntity;", cancellable = true)
+    @Inject(at = @At("TAIL"), method = "drop(Lnet/minecraft/world/item/ItemStack;Z)Lnet/minecraft/world/entity/item/ItemEntity;", cancellable = true)
     public void injectDrop(ItemStack itemStack, boolean bl, CallbackInfoReturnable<ItemEntity> cir) {
         Player player = (Player) (Object) this;
 

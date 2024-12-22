@@ -6,8 +6,10 @@
     "defaultRequire": 0
   },
   "mixins": [
+    "MixinCommands",
     "MixinPlayer",
     "MixinPlayerList",
+    "MixinServerGamePacketListenerImpl",
     "MixinServerLevel"
   ]
 }

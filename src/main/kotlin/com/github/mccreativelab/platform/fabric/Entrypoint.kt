@@ -115,13 +115,13 @@ fun initServer() {
 // TODO: MCCPlayerAttemptPickupItemEvent
 // TODO: MCCPlayerUnregisterChannelEvent
 // TODO: MCCPlayerExpChangeEvent
-// TODO: MCCPlayerToggleSprintEvent
-// TODO: MCCPlayerCommandSendEvent
 
 /*
- * Needs testing:
- * - MCCPlayerDropItemEvent
- * - MCCPlayerJoinEvent
- * - MCCWorldLoadEvent
- * - MCCWorldUnloadEvent
+ * needs testing
+ * MCCPlayerJoinEvent
+ * MCCPlayerDropItemEvent
+ * MCCWorldLoadEvent
+ * MCCWorldUnloadEvent
+ * MCCPlayerCommandSendEvent
+ * MCCPlayerToggleSprintEvent
  */
