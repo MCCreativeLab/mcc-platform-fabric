@@ -2,11 +2,13 @@ package com.github.mccreativelab.platform.fabric.mixins;
 
 import com.google.common.reflect.TypeToken;
 import de.verdox.mccreativelab.wrapper.event.world.MCCWorldLoadEvent;
+import de.verdox.mccreativelab.wrapper.event.world.MCCWorldSaveEvent;
 import de.verdox.mccreativelab.wrapper.event.world.MCCWorldUnloadEvent;
 import de.verdox.mccreativelab.wrapper.platform.MCCPlatform;
 import de.verdox.mccreativelab.wrapper.world.MCCWorld;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.util.ProgressListener;
 import net.minecraft.world.level.Level;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -58,5 +60,21 @@ public class MixinServerLevel {
         if (event.callEvent()) {
             ci.cancel();
         }
+    }
+
+    /**
+     * Injects the save event for the world.
+     *
+     * @param progress The progress listener.
+     * @param flush    Whether the world should be flushed.
+     * @param skipSave Whether the world should be saved.
+     * @param ci       The callback info.
+     */
+    @Inject(at = @At("HEAD"), method = "save")
+    public void injectSave(ProgressListener progress, boolean flush, boolean skipSave, CallbackInfo ci) {
+        MCCWorldSaveEvent event = new MCCWorldSaveEvent(
+                MCCPlatform.getInstance().getConversionService().wrap((Level) (Object) this, TypeToken.of(MCCWorld.class)) // TODO: check if this is correct
+        );
+        event.callEvent();
     }
 }
