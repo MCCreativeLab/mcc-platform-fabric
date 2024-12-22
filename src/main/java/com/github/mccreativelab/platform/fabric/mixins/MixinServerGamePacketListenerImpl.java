@@ -18,7 +18,7 @@ public class MixinServerGamePacketListenerImpl {
 
     @Shadow public ServerPlayer player;
 
-    @Inject(at = @At(value = "TAIL"), method = "handlePlayerCommand") // TODO: find better injection point
+    @Inject(at = @At(value = "TAIL"), method = "handlePlayerCommand", cancellable = true) // TODO: find better injection point
     private void injectStopSprinting(ServerboundPlayerCommandPacket packet, CallbackInfo ci) {
         if (packet.getAction() == ServerboundPlayerCommandPacket.Action.STOP_SPRINTING) {
             MCCPlayerToggleSprintEvent event = new MCCPlayerToggleSprintEvent(
@@ -26,6 +26,13 @@ public class MixinServerGamePacketListenerImpl {
                     packet.getAction() == ServerboundPlayerCommandPacket.Action.START_SPRINTING,
                     ci.isCancelled() // TODO: check if this is correct
             );
+
+            boolean cancelled = event.callEvent();
+
+            if (cancelled) {
+                player.setSprinting(false); // check if this is correct
+                ci.cancel();
+            }
         }
     }
 }
