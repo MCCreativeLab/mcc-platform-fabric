@@ -13,11 +13,23 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+/**
+ * The mixin class for ServerGamePacketListenerImpl.
+ * <p>
+ * Implements the following events:
+ * - MCCPlayerToggleSprintEvent
+ */
 @Mixin(ServerGamePacketListenerImpl.class)
 public class MixinServerGamePacketListenerImpl {
 
     @Shadow public ServerPlayer player;
 
+    /**
+     * Injects the sprinting event for the player.
+     *
+     * @param packet The packet.
+     * @param ci     The callback info.
+     */
     @Inject(at = @At(value = "TAIL"), method = "handlePlayerCommand", cancellable = true) // TODO: find better injection point
     private void injectStopSprinting(ServerboundPlayerCommandPacket packet, CallbackInfo ci) {
         if (packet.getAction() == ServerboundPlayerCommandPacket.Action.STOP_SPRINTING) {

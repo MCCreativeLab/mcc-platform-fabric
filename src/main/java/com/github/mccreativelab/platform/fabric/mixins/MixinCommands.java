@@ -13,9 +13,20 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.Collections;
 
+/**
+ * The mixin class for Commands.
+ * <p>
+ * Implements the following events:
+ * - MCCPlayerCommandSendEvent
+ */
 @Mixin(Commands.class)
 public class MixinCommands {
 
+    /**
+     * Injects the command send event for the player.
+     * @param player The player.
+     * @param ci    The callback info.
+     */
     @Inject(at = @At("TAIL"), method = "sendCommands")
     private void injectRunSync(ServerPlayer player, CallbackInfo ci) {
         MCCPlayerCommandSendEvent event = new MCCPlayerCommandSendEvent(

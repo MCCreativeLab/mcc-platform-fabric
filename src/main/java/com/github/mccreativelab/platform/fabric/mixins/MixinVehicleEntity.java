@@ -11,9 +11,22 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+/**
+ * The mixin class for VehicleEntity.
+ * <p>
+ * Implements the following events:
+ * - MCCVehicleDamageEvent
+ */
 @Mixin(VehicleEntity.class)
 public class MixinVehicleEntity {
 
+    /**
+     * Injects the damage event for the vehicle.
+     *
+     * @param source The source of the damage.
+     * @param amount The amount of damage.
+     * @param cir    The callback info returnable.
+     */
     @Inject(at = @At("HEAD"), method = "hurt")
     public void injectHurt(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
         // MCCEntity vehicle, MCCEntity attacker, double damage, boolean cancelled
