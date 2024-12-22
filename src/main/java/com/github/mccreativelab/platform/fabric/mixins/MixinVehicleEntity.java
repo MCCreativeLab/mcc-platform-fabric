@@ -32,7 +32,7 @@ public class MixinVehicleEntity {
         // MCCEntity vehicle, MCCEntity attacker, double damage, boolean cancelled
         MCCVehicleDamageEvent event = new MCCVehicleDamageEvent(
                 MCCPlatform.getInstance().getConversionService().wrap((VehicleEntity) (Object) this, TypeToken.of(MCCEntity.class)),
-                MCCPlatform.getInstance().getConversionService().wrap((VehicleEntity) (Object) source.getEntity(), TypeToken.of(MCCEntity.class)), // TODO: check if this is correct - because there is also getDirectEntity()
+                MCCPlatform.getInstance().getConversionService().wrap((VehicleEntity) source.getEntity(), TypeToken.of(MCCEntity.class)), // TODO: check if this is correct - because there is also getDirectEntity()
                 amount,
                 cir.isCancelled()
         );

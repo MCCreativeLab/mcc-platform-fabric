@@ -23,7 +23,6 @@ fun initServer() {
     }
 }
 
-// TODO: MCCVehicleDamageEvent
 // TODO: MCCVehicleMoveEvent
 // TODO: MCCVehicleExitEvent
 // TODO: MCCVehicleUpdateEvent
@@ -124,4 +123,5 @@ fun initServer() {
  * MCCWorldUnloadEvent
  * MCCPlayerCommandSendEvent
  * MCCPlayerToggleSprintEvent
+ * MCCVehicleDamageEvent
  */
