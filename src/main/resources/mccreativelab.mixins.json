@@ -11,5 +11,8 @@
     "MixinPlayerList",
     "MixinServerGamePacketListenerImpl",
     "MixinServerLevel"
+  ],
+  "server": [
+    "MixinVehicleEntity"
   ]
 }
