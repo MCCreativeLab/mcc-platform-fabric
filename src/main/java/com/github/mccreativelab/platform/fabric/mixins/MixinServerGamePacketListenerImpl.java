@@ -31,7 +31,7 @@ public class MixinServerGamePacketListenerImpl {
      * @param ci     The callback info.
      */
     @Inject(at = @At(value = "TAIL"), method = "handlePlayerCommand", cancellable = true) // TODO: find better injection point
-    private void injectStopSprinting(ServerboundPlayerCommandPacket packet, CallbackInfo ci) {
+    private void injectHandlePlayerCommand(ServerboundPlayerCommandPacket packet, CallbackInfo ci) {
         if (packet.getAction() == ServerboundPlayerCommandPacket.Action.STOP_SPRINTING) {
             MCCPlayerToggleSprintEvent event = new MCCPlayerToggleSprintEvent(
                     MCCPlatform.getInstance().getConversionService().wrap(player, TypeToken.of(MCCPlayer.class)),
