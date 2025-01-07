@@ -18,7 +18,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
  * <p>
  * Implements the following events:
  * <p>
- * - MCCPlayerToggleSprintEvent
+ * - {@link MCCPlayerToggleSprintEvent}
  */
 @Mixin(ServerGamePacketListenerImpl.class)
 public class MixinServerGamePacketListenerImpl {

@@ -21,7 +21,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
  * <p>
  * Implements the following events:
  * <p>
- * - MCCPlayerJoinEvent
+ * - {@link MCCPlayerJoinEvent}
  */
 @Mixin(PlayerList.class)
 public class MixinPlayerList {

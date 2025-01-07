@@ -21,11 +21,11 @@ import java.util.List;
  * <p>
  * Implements the following events:
  * <p>
- * - MCCWorldLoadEvent
+ * - {@link MCCWorldLoadEvent}
  * <p>
- * - MCCWorldUnloadEvent
+ * - {@link MCCWorldUnloadEvent}
  * <p>
- * - MCCWorldSaveEvent
+ * - {@link MCCWorldSaveEvent}
  */
 @Mixin(ServerLevel.class)
 public class MixinServerLevel {

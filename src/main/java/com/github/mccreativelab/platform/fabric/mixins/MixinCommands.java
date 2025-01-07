@@ -18,7 +18,7 @@ import java.util.Collections;
  * <p>
  * Implements the following events:
  * <p>
- * - MCCPlayerCommandSendEvent
+ * - {@link MCCPlayerCommandSendEvent}
  */
 @Mixin(Commands.class)
 public class MixinCommands {
