@@ -17,6 +17,7 @@ import java.util.Collections;
  * The mixin class for Commands.
  * <p>
  * Implements the following events:
+ * <p>
  * - MCCPlayerCommandSendEvent
  */
 @Mixin(Commands.class)

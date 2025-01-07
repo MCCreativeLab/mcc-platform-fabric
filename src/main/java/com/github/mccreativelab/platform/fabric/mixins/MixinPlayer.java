@@ -18,6 +18,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
  * The mixin class for Player.
  * <p>
  * Implements the following events:
+ * <p>
  * - MCCPlayerDropItemEvent
  */
 @Mixin(Player.class)

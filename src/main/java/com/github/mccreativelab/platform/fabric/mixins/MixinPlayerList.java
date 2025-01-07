@@ -20,6 +20,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
  * The mixin class for PlayerList.
  * <p>
  * Implements the following events:
+ * <p>
  * - MCCPlayerJoinEvent
  */
 @Mixin(PlayerList.class)

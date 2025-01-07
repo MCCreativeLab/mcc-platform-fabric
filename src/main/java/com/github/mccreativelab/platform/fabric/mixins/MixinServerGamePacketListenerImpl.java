@@ -17,6 +17,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
  * The mixin class for ServerGamePacketListenerImpl.
  * <p>
  * Implements the following events:
+ * <p>
  * - MCCPlayerToggleSprintEvent
  */
 @Mixin(ServerGamePacketListenerImpl.class)

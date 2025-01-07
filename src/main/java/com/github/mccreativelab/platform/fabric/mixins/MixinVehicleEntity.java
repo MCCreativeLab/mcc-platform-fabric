@@ -15,6 +15,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
  * The mixin class for VehicleEntity.
  * <p>
  * Implements the following events:
+ * <p>
  * - MCCVehicleDamageEvent
  */
 @Mixin(VehicleEntity.class)
