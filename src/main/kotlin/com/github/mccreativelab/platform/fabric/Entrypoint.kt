@@ -66,7 +66,6 @@ fun initServer() {
 // TODO: MCCEntityCombustByBlockEvent
 // TODO: MCCBatToggleSleepEvent
 // TODO: MCCStriderTemperatureChangeEvent
-// TODO: MCCSlimeSplitEvent
 // TODO: MCCHorseJumpEvent
 // TODO: MCCExpBottleEvent
 // TODO: MCCEntityEnterBlockEvent
@@ -124,4 +123,5 @@ fun initServer() {
  * MCCPlayerToggleSprintEvent
  * MCCVehicleDamageEvent
  * MCCWorldSaveEvent
+ * MCCSlimeSplitEvent
  */

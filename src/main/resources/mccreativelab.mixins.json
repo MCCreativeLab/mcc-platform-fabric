@@ -10,7 +10,8 @@
     "MixinPlayer",
     "MixinPlayerList",
     "MixinServerGamePacketListenerImpl",
-    "MixinServerLevel"
+    "MixinServerLevel",
+    "MixinSlime"
   ],
   "server": [
     "MixinVehicleEntity"
