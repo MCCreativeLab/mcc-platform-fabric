@@ -40,9 +40,7 @@ public class MixinPlayer {
                 cir.isCancelled() // TODO: check if this is correct
         );
 
-        boolean isCancelled = event.callEvent();
-
-        if (isCancelled) {
+        if (event.callEvent()) {
             cir.setReturnValue(null);
         }
     }
