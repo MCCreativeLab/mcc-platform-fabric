@@ -28,7 +28,9 @@ dependencies {
         parchment("org.parchmentmc.data:parchment-$minecraftVersion:2024.11.17@zip")
     })
 
-    modImplementation("net.fabricmc:fabric-loader:0.16.9")
+    val loaderVersion = "0.16.9"
+
+    modImplementation("net.fabricmc:fabric-loader:$loaderVersion")
     modImplementation("net.fabricmc:fabric-language-kotlin:1.13.0+kotlin.2.1.0")
 
     modImplementation("net.silkmc:silk-core:$silkVersion")
@@ -37,6 +39,8 @@ dependencies {
     include(implementation("de.verdox.mccreativelab.mcc-wrapper", "api", "1.21.1-R0.1-SNAPSHOT"))
     include(implementation("de.verdox.mccreativelab.mcc-wrapper", "vanilla", "1.21.1-R0.1-SNAPSHOT"))
     include(implementation("de.verdox", "vserializer", "1.0.5-SNAPSHOT"))
+
+    testImplementation("net.fabricmc:fabric-loader-junit:$loaderVersion")
 }
 
 tasks {
@@ -54,6 +58,10 @@ tasks {
         val properties = mapOf("version" to project.version)
         inputs.properties(properties)
         filesMatching("fabric.mod.json") { expand(properties) }
+    }
+
+    test {
+        useJUnitPlatform()
     }
 }
 
