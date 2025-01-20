@@ -9,6 +9,9 @@ import net.kyori.adventure.text.Component
  */
 class FabricPlatform : NMSPlatform() {
 
+    /**
+     * Initializes the platform.
+     */
     override fun init() {
         super.init()
         conversionService.registerConverterForNewImplType(Component::class.java, ComponentConverter())
