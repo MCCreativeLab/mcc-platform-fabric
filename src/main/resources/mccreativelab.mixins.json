@@ -7,6 +7,7 @@
   },
   "mixins": [
     "MixinCommands",
+    "MixinMinecraftServer",
     "MixinPlayer",
     "MixinPlayerList",
     "MixinServerGamePacketListenerImpl",

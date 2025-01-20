@@ -21,6 +21,7 @@ fun initServer() {
         it.init()
         logger.info("MCCPlatform has been setup.")
     }
+    MCCPlatform.getInstance().triggerLifecycleEvent(MCCPlatform.Lifecycle.BOOTSTRAP)
 }
 
 // TODO: MCCVehicleMoveEvent
