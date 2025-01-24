@@ -36,8 +36,10 @@ dependencies {
     modImplementation("net.silkmc:silk-core:$silkVersion")
     modImplementation("net.kyori", "adventure-platform-fabric", "5.14.1")
 
-    include(implementation("de.verdox.mccreativelab.mcc-wrapper", "api", "1.21.1-R0.1-SNAPSHOT"))
-    include(implementation("de.verdox.mccreativelab.mcc-wrapper", "vanilla", "1.21.1-R0.1-SNAPSHOT"))
+    val mccVersion = "1.21.1-R0.1-SNAPSHOT"
+
+    include(implementation("de.verdox.mccreativelab.mcc-wrapper", "api", mccVersion))
+    include(implementation("de.verdox.mccreativelab.mcc-wrapper", "vanilla", mccVersion))
     include(implementation("de.verdox", "vserializer", "1.0.5-SNAPSHOT"))
 
     testImplementation("net.fabricmc:fabric-loader-junit:$loaderVersion")
