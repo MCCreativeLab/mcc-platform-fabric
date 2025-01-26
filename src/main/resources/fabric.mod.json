@@ -30,7 +30,7 @@
     ]
   },
   "mixins": [
-    "mccreativelab.mixins.json"
+    "lifecycle.mccreativelab.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.15",
