@@ -113,16 +113,12 @@ fun initServer() {
 // TODO: MCCPlayerAttemptPickupItemEvent
 // TODO: MCCPlayerUnregisterChannelEvent
 // TODO: MCCPlayerExpChangeEvent
-
-/*
- * needs testing
- * MCCPlayerJoinEvent
- * MCCPlayerDropItemEvent
- * MCCWorldLoadEvent
- * MCCWorldUnloadEvent
- * MCCPlayerCommandSendEvent
- * MCCPlayerToggleSprintEvent
- * MCCVehicleDamageEvent
- * MCCWorldSaveEvent
- * MCCSlimeSplitEvent
- */
+// TODO: MCCPlayerJoinEvent
+// TODO: MCCPlayerDropItemEvent
+// TODO: MCCWorldLoadEvent
+// TODO: MCCWorldUnloadEvent
+// TODO: MCCPlayerCommandSendEvent
+// TODO: MCCPlayerToggleSprintEvent
+// TODO: MCCVehicleDamageEvent
+// TODO: MCCWorldSaveEvent
+// TODO: MCCSlimeSplitEvent

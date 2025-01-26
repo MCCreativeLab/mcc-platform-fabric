@@ -6,15 +6,8 @@
     "defaultRequire": 0
   },
   "mixins": [
-    "MixinCommands",
-    "MixinMinecraftServer",
-    "MixinPlayer",
-    "MixinPlayerList",
-    "MixinServerGamePacketListenerImpl",
-    "MixinServerLevel",
-    "MixinSlime"
+
   ],
   "server": [
-    "MixinVehicleEntity"
   ]
 }
