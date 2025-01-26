@@ -8,7 +8,6 @@ import net.silkmc.silk.core.Silk
 import net.kyori.adventure.text.Component as AdventureComponent
 import net.minecraft.network.chat.Component as NativeComonent
 
-// TODO: Test this converter
 /**
  * A converter for components.
  */
