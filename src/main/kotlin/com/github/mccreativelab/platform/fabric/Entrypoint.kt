@@ -114,10 +114,9 @@ fun initServer() {
 // TODO: MCCPlayerUnregisterChannelEvent
 // TODO: MCCPlayerExpChangeEvent
 // TODO: MCCPlayerJoinEvent
-// TODO: MCCPlayerDropItemEvent
+// TODO: fix MCCPlayerDropItemEvent
 // TODO: MCCWorldLoadEvent
 // TODO: MCCWorldUnloadEvent
-// TODO: MCCPlayerCommandSendEvent
 // TODO: MCCPlayerToggleSprintEvent
 // TODO: MCCVehicleDamageEvent
 // TODO: MCCWorldSaveEvent
