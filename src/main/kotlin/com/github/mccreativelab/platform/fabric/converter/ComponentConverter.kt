@@ -6,12 +6,12 @@ import net.minecraft.network.chat.Component
 import net.minecraft.network.chat.Component.Serializer
 import net.silkmc.silk.core.Silk
 import net.kyori.adventure.text.Component as AdventureComponent
-import net.minecraft.network.chat.Component as NativeComonent
+import net.minecraft.network.chat.Component as NativeComponent
 
 /**
  * A converter for components.
  */
-class ComponentConverter: MCCConverter<NativeComonent, AdventureComponent> {
+class ComponentConverter: MCCConverter<NativeComponent, AdventureComponent> {
 
     /**
      * Wraps a native component.
@@ -46,6 +46,6 @@ class ComponentConverter: MCCConverter<NativeComonent, AdventureComponent> {
      * @return The class of the native Minecraft type.
      */
     override fun nativeMinecraftType(): Class<Component> {
-        return NativeComonent::class.java
+        return NativeComponent::class.java
     }
 }
